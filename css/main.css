@@ -26,34 +26,27 @@ html {
 }
 
 body {
-  margin: 1.2rem;
-  margin-bottom: 0;
-  margin-top: 0;
+  margin: 0;
 }
 
 img {
   display: block;
   width: 100%;
-  padding-bottom: 1.5rem;
+  align-items: center;
 }
 
 header {
-  margin: 0;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding-top: 1rem;
+  margin: 1rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
 }
 
 header [lang="ja"] {
   font-size: 2rem;
-}
-
-header img {
-  margin: 0;
-  padding-top: 1rem;
-  padding-bottom: .5rem;
-  border-bottom: 1.5px solid #e2e2e2;
 }
 
 nav ul {
@@ -70,8 +63,8 @@ nav a {
 }
 
 nav li {
-  padding-left: .5rem;
-  padding-right: .5rem;
+  padding: 0 .5rem;
+  padding-bottom: 1rem;
 }
 
 h1 {
@@ -82,19 +75,23 @@ h1 {
 
 article {
   margin: 0;
-  padding-bottom: .5rem;
-  border-bottom: 1.5px solid #e2e2e2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.boxes {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  margin: 1.5rem;
 }
 
 main {
   margin: 0;
   margin-bottom: 0;
   margin-top: 0;
-  display: contents;
-  display: grid;
-  grid-gap: 1rem;
-  grid-template-rows: 5fr;
-  grid-template-columns: 2fr;
 }
 
 .btn {
@@ -108,38 +105,50 @@ main {
 
 footer {
   text-align: center;
-  font-size: .75em;
-  padding: 1.5rem;
+  padding: 1rem;
+  padding-top: .5rem;
+  border-top: 2.5px solid #e2e2e2;
 }
 
-section [lang="ja"] {
+.card [lang="ja"] {
   font-size: 2rem;
 }
 
-section {
+.card {
   text-align: center;
-  border-bottom: 1.5px solid #e2e2e2;
+  border-bottom: 2.5px solid #e2e2e2;
+  border-top: 2.5px solid #e2e2e2;
+  margin: 1.5rem;
+  margin-bottom: 1rem;
+  margin-top: 0;
+  padding-top: 1rem;
 }
 
-section p {
+.card p {
   padding: 1rem;
-  padding-bottom: 1.125rem;
+  padding-bottom: 0;
+  margin-bottom: 2rem;
 }
 
 article [lang="ja"] {
   font-size: 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-top: 1.5rem;
 }
 
-article h2 {
+h2 {
   font-size: 1rem;
-  margin: 0;
+  margin: 0 0 .5rem;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
 }
 
 p {
-  margin: 0;
-  padding-bottom: 1.75rem;
+  margin: 0 0 1.5rem;
   font-size: 1rem;
-  padding-top: 1.75rem;
 }
 
 @media only screen and (min-width: 38em) {
