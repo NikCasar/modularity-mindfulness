@@ -1,5 +1,13 @@
+@-moz-viewport { width: device-width; scale: 1; }
+@-ms-viewport { width: device-width; scale: 1; }
+@-o-viewport { width: device-width; scale: 1; }
+@-webkit-viewport { width: device-width; scale: 1; }
+@viewport { width: device-width; scale: 1; }
+
 html {
   box-sizing: border-box;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
   font-family: "Noto Sans", sans-serif;
@@ -18,10 +26,132 @@ html {
 }
 
 body {
-  margin: 0;
+  margin: 1.2rem;
+  margin-bottom: 0;
+  margin-top: 0;
 }
 
 img {
   display: block;
   width: 100%;
+  padding-bottom: 1.5rem;
+}
+
+header {
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 1rem;
+}
+
+header [lang="ja"] {
+  font-size: 2rem;
+}
+
+header img {
+  margin: 0;
+  padding-top: 1rem;
+  padding-bottom: .5rem;
+  border-bottom: 1.5px solid #e2e2e2;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav a {
+  color: #3783a3;
+  font-size: 1.125rem;
+}
+
+nav li {
+  padding-left: .5rem;
+  padding-right: .5rem;
+}
+
+h1 {
+  margin: 0;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+article {
+  margin: 0;
+  padding-bottom: .5rem;
+  border-bottom: 1.5px solid #e2e2e2;
+}
+
+main {
+  margin: 0;
+  margin-bottom: 0;
+  margin-top: 0;
+  display: contents;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-rows: 5fr;
+  grid-template-columns: 2fr;
+}
+
+.btn {
+  display: block;
+  padding: .5em 1em .6em;
+  border: .2rem #3783a3 solid;
+  border-radius: .3rem;
+  color: #3783a3;
+  text-decoration: none;
+}
+
+footer {
+  text-align: center;
+  font-size: .75em;
+  padding: 1.5rem;
+}
+
+section [lang="ja"] {
+  font-size: 2rem;
+}
+
+section {
+  text-align: center;
+  border-bottom: 1.5px solid #e2e2e2;
+}
+
+section p {
+  padding: 1rem;
+  padding-bottom: 1.125rem;
+}
+
+article [lang="ja"] {
+  font-size: 1.5rem;
+}
+
+article h2 {
+  font-size: 1rem;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+  padding-bottom: 1.75rem;
+  font-size: 1rem;
+  padding-top: 1.75rem;
+}
+
+@media only screen and (min-width: 38em) {
+
+  html {
+    font-size: 110%;
+    line-height: 1.4;
+  }
+
+  h1,
+  p {
+    margin: 0 0 1.4rem;
+  }
+
 }
